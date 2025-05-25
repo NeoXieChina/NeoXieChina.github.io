@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="电教委员技术展示门户">
+    <title>电化教育中心 - 雷欧</title>
+    <style>
+        :root {
+            --primary-blue: #2c3e50;
+            --accent-blue: #3498db;
+            --tech-orange: #e67e22;
+            --github-black: #24292e;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 头部样式 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .tech-tags {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .tech-tag {
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* 卡片布局 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* GitHub项目样式 */
+        .github-project {
+            border-left: 4px solid var(--tech-orange);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+        }
+        .github-link {
+            color: var(--tech-orange);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .tech-stack {
+            color: #666;
+            font-size: 0.9em;
+            margin: 0.5rem 0;
+        }
+
+        /* 官网嵌入样式 */
+        .embed-section {
+            margin: 3rem 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .embed-header {
+            background: var(--primary-blue);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .github-icon {
+            width: 24px;
+            height: 24px;
+        }
+        #project-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            background: white;
+        }
+        .embed-notice {
+            padding: 1rem;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            #project-iframe {
+                height: 400px;
+            }
+            .heatmap-grid {
+                grid-template-columns: repeat(12, 12px);
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部信息 -->
+        <header class="hero">
+            <h1>电化教育中心 · 雷欧</h1>
+            <p>地球｜高级电化教育设备管理维护工程师</p>
+            <div class="tech-tags">
+                <span class="tech-tag">📡 设备运维</span>
+                <span class="tech-tag">💻 系统开发</span>
+                <span class="tech-tag">🔧 技术培训</span>
+            </div>
+        </header>
+
+        <!-- 核心信息 -->
+        <section class="card-grid">
+            <div class="card">
+                <h2>📌 主要职责</h2>
+                <ul>
+                    <li>多媒体设备日常维护</li>
+                    <li>教师技术支援</li>
+                    <li>设备故障应急响应</li>
+                    <li>技术文档编写</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>🏆 工作成果</h2>
+                <ul>
+                    <li>设备正常率：98.7%</li>
+                    <li>启动耗时优化40%</li>
+                    <li>开发状态监控系统</li>
+                    <li>制作电子版手册</li>
+                </ul>
+            </div>
+        </section>
+      
+        <!-- GitHub项目 -->
+        <section>
+            <h2>🚀 技术实践</h2>
+            <div class="github-project">
+                <h3>
+                    <a href="https://github.com/NeoXieChina/djb" 
+                       class="github-link"
+                       target="_blank">
+                       电教部官网系统
+                    </a>
+                </h3>
+                <p class="tech-stack">JavaScript｜Cloudflare Pages｜在线指导</p>
+                <ul>
+                    <li>视频讲解功能</li>
+                    <li>专业领先两百年</li>
+                    <li>移动端适配</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 官网嵌入 -->
+        <section class="embed-section">
+            <div class="embed-header">
+                <svg class="github-icon" viewBox="0 0 16 16">
+                    <path fill="white" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+                <h2>电教部官方网站</h2>
+            </div>
+            <iframe 
+                id="project-iframe"
+                src="https://7wdj.github.io" 
+                title="成都七中万达学校电教部官网"
+                loading="lazy"
+                sandbox="allow-scripts allow-same-origin"
+            ></iframe>
+            <div class="embed-notice">
+                提示：若内容未正常显示，请
+                <a href="https://7wdj.github.io" target="_blank">直接访问官网</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 自适应iframe高度
+        window.addEventListener('message', function(e) {
+            if(e.data?.height) {
+                document.getElementById('project-iframe').style.height = e.data.height + 'px';
+            }
+        });
+
+        // 初始化
+        window.addEventListener('DOMContentLoaded', () => {
+            generateContributions();
+            
+            // 加载状态指示
+            const loader = document.createElement('div');
+            loader.textContent = '正在加载官网内容...';
+            loader.style.cssText = 'text-align:center; padding:1rem; color:#666;';
+            document.getElementById('project-iframe').parentNode.insertBefore(loader, document.getElementById('project-iframe'));
+            
+            document.getElementById('project-iframe').addEventListener('load', () => {
+                loader.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
